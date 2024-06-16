@@ -10,7 +10,8 @@ def menu_principal():
     print("7. Menú supervisor")
     print("8. Menú direcciones")
     print("9. Menú consultas.")
-    print("10. Salir.")
+    print("10. Calcular satisfacción de cliente.")
+    print("11. Salir.")
 
 
 def menu_clientes():
@@ -209,14 +210,17 @@ def menu_satisfacción_cliente():
 def menu_consultas():
     while True:
         print("\nMenú consultas:")
-        print("1. Consulta: Mostrar los productos que tengan un precio mayor a un valor ingresado.")
-        print("2. Consulta: Mostrar ventas las ventas realizadas entre dos fechas.")
-        print("3. Consulta: Mostrar clientes que tengan teléfonos registrados.")
-        print("4. Consulta: Mostrar empleados por célula.")
-        print("5. Consulta: Mostrar clientes que residan en Córdoba.")
-        print("6. Consulta: Mostrar datos de empleados y supervisores por célula")
-        print("7. Consulta: Mostrar ventas por tipo de pago")
-        print("8. Volver.")
+        print("1. Consulta: Mostrar los productos que tengan un precio mayor a un valor ingresado.") #una tabla
+        print("2. Consulta: Mostrar ventas las ventas realizadas entre dos fechas.") #between
+        print("3. Consulta: Mostrar clientes que tengan teléfonos registrados.") #usa los nulos
+        print("4. Consulta: Mostrar empleados por célula.") #inner join
+        print("5. Consulta: Mostrar clientes que residan en Córdoba.") #inner join con filtro
+        print("6. Consulta: Mostrar datos de empleados y supervisores por célula.") #inner join
+        print("7. Consulta: Mostrar ventas pagadas con tarjeta de crédito ") #inner join - like
+        print("8. Consulta: Mostrar los clientes por la cantidad de ventas que realizaron.") #group by
+        print("9. Consulta: Mostrar los últimos cuatro productos cargados a la base de datos.") #limit
+        print("10. Consulta: Mostrar los empleados activos.") #usa el dato lógico o booleano 
+        print("11. Volver.")
         opcion = input("Seleccione una opción: ")
         
         if opcion == "1":
@@ -234,6 +238,13 @@ def menu_consultas():
         elif opcion == "7":
             consultas.consulta_siete()
         elif opcion == "8":
+            consultas.consulta_ocho()
+        elif opcion == "9":
+            consultas.consulta_nueve()
+        elif opcion == "10":
+            consultas.consulta_diez()
+        elif opcion == "11":
             break
         else:
             print("Opción no válida. Intente de nuevo.")
+

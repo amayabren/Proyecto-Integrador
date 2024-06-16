@@ -1,4 +1,5 @@
 import baseDeDatos
+
 def consulta_uno():
     precio = int(input("Mostrar los productos que tengan un precio mayor a: "))
     query = "SELECT * FROM productos WHERE precio > %s;"
@@ -49,10 +50,29 @@ def consulta_seis():
         print(ventas) 
 
 def consulta_siete():
-    query = "SELECT ventas.idVentas, ventas.Clientes_IdClientes, métodopago.Tipo FROM métodopago INNER JOIN ventas ON métodopago.idMétodoPago = ventas.MétodoPago_idMétodoPago;" 
+    query = "SELECT ventas.idVentas, ventas.Clientes_IdClientes, métodopago.Tipo FROM métodopago INNER JOIN ventas ON métodopago.idMétodoPago = ventas.MétodoPago_idMétodoPago WHERE métodopago.Tipo LIKE '%Tarjeta de Crédito%';" 
     baseDeDatos.cursor.execute(query)    
     ventas = baseDeDatos.cursor.fetchall()  
     for ventas in ventas:
         print(ventas) 
 
+def consulta_ocho():
+    query = "SELECT c.idClientes, c.Nombre, c.Apellido, COUNT(v.idVentas) AS total_ventas FROM clientes c INNER JOIN ventas v ON c.idClientes = v.Clientes_idClientes GROUP BY c.idClientes, c.Nombre, c.Apellido ORDER BY total_ventas DESC;"
+    baseDeDatos.cursor.execute(query)    
+    ventas = baseDeDatos.cursor.fetchall()  
+    for ventas in ventas:
+        print(ventas)
 
+def consulta_nueve():
+    query = "SELECT * FROM productos ORDER BY idProductos DESC LIMIT 4;"
+    baseDeDatos.cursor.execute(query)    
+    ventas = baseDeDatos.cursor.fetchall()  
+    for ventas in ventas:
+        print(ventas)
+
+def consulta_diez():
+    query = "SELECT idEmpleado, Nombre, Apellido, Supervisor_Célula FROM empleado WHERE Activo = 1;"
+    baseDeDatos.cursor.execute(query)    
+    ventas = baseDeDatos.cursor.fetchall()  
+    for ventas in ventas:
+        print(ventas)    

@@ -9,7 +9,7 @@ VALUES ("Olivia", "Gonzalez", "olivia@ejemplo.com", NULL),
 INSERT INTO supervisor (Nombre, Apellido, Célula)
 VALUES ("Verónica", "Aguirre", 1),
 ("David", "Arias", 2),
-("Maria", "Escalante", 3)
+("Maria", "Escalante", 3),
 ("Fernando", "Perez", 4);
 
 INSERT INTO métodopago (Tipo)
@@ -18,13 +18,13 @@ VALUES ("Tarjeta de Crédito"),
 ("Transferencia"),
 ("Efectivo");
 
-INSERT INTO empleado (Nombre, Apellido, Fecha_ingreso, Supervisor_Célula)
-VALUES ("Eduardo", "Lopez", "2024-01-01", 2), 
-("Lucia", "Acuña", "2020-01-02", 3),
-("Rocio", "Pacheco", "2019-05-08", 1),
-("Diego", "Zapata", "2022-09-01", 1), 
-("Jorge", "Suarez", "2024-06-05", 3),
-("Andrea", "Romero", "2019-05-08", 2);
+INSERT INTO empleado (Nombre, Apellido, Fecha_ingreso, Supervisor_Célula, Activo)
+VALUES ("Eduardo", "Lopez", "2024-01-01", 2, 1), 
+("Lucia", "Acuña", "2020-01-02", 3, 1),
+("Rocio", "Pacheco", "2019-05-08", 1, 1),
+("Diego", "Zapata", "2022-09-01", 1, 1), 
+("Jorge", "Suarez", "2024-06-05", 3, 0),
+("Andrea", "Romero", "2019-05-08", 2, 0);
 
 INSERT INTO productos (Nombre, Descripción, Precio)
 VALUES ("Moto E22 64 GB", NULL, 175999),

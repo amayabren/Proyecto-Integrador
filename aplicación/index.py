@@ -1,4 +1,4 @@
-import menus
+import menus, satisfacción_venta
 
 while True:
     menus.menu_principal()
@@ -22,6 +22,8 @@ while True:
     elif opcion == 9:    
          menus.menu_consultas()     
     elif opcion == 10:
-        break
+        satisfacción_venta.menu_satisfacción_venta()
+    elif opcion == 11:
+         break
     else:
          print("Opción no válida. Intente de nuevo.")
