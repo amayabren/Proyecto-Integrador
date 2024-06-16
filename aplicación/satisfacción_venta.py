@@ -31,10 +31,10 @@ def satisfacción_venta():
         prom = suma_total / len(satisfaccion_cliente) #calcula el promedio. len nos da la longitud de la lista, o sea cuantas tuplas tiene.   
         
         if prom > 4:
-            print("La efectividad de venta es BUENA.")
+            print("La satisfacción de cliente es BUENA.")
         elif prom > 3:
-            print("La efectividad de venta es REGULAR.")
+            print("La satisfacción de cliente es REGULAR.")
         else:
-            print("La efectividad de venta es MALA.")
+            print("La satisfacción de cliente es MALA.")
     else:
         print("No se encontraron datos de satisfacción para el empleado.")
