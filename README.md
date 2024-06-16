@@ -98,14 +98,15 @@ La aplicación se ha estructurado de manera modular para facilitar su mantenimie
     - **Uso**: Muestra informes específicos.
 
 ## Uso de la Aplicación
-Para ejecutar la aplicación, usa el siguiente comando en la terminal:
+Para ejecutar la aplicación, usa el siguiente comando en la terminal (para la tranquilidad del usuario se facilitaran los driver correspondientes que te indicaran el paso a paso para concretar la isntalación):
 
-**python index.py**
+**python index.py** 
 
-Sigue las instrucciones en pantalla para navegar por el menú principal y gestionar las diferentes entidades.
+Sigue las instrucciones en pantalla para navegar por el menú principal y gestionar las diferentes entidades. Esto te permitirá gestionar el stock de tu emprendimiento, tener seguimiento de las ventas realizadas vía detalle de las mismas y su vez poder monitorizar el rendimiento de los empleados mediante la satisfacción obtenida de los cliente en el proceso de venta. Con la aplicación podras tener un sustento númerico para gestionar volumenes de venta y resultados operativos. 
 
 ## Base de Datos
 Diseñamos una base de datos MySQL siguiendo el modelo entidad-relación (DER) y convertimos este modelo en un modelo relacional. La base de datos contiene tablas para cada entidad con relaciones bien definidas. También hemos incluido scripts SQL para crear la estructura de la base de datos, insertar datos iniciales y realizar consultas.
+Información para el usuario: Los driver incluyen la instalación de la estructura de tablas para la base de datos (estimamos contemplar esto en el diseño de un interfaz grafico amigable con el usuario, con el nombre Setup BD), donde solo se debera definir nombre de las tablas para admnistrar el negocio y posteriormente ingresar en las mismas los datos de stockeo de productos, detalle de ventas para su control/seguimiento y datos del personal en general para recabar el rendimiento y resultado de los mismos en el proceso de gestión de venta. 
 
 ## Navegación del Repositorio
 El repositorio está organizado de la siguiente manera:
